@@ -7,19 +7,19 @@ function App() {
     <div>
       <div>
         <Button success rounded outline>
-          <GoBell className="mr-1" />
+          <GoBell />
           Click me!!
         </Button>
       </div>
       <div>
         <Button danger outline>
-          <GoCloudDownload className="mr-1" />
+          <GoCloudDownload />
           Buy Now!
         </Button>
       </div>
       <div>
         <Button warning>
-          <GoDatabase className="mr-1" />
+          <GoDatabase />
           See Deal!
         </Button>
       </div>
