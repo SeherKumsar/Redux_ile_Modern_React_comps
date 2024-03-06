@@ -10,7 +10,7 @@ function Button({
   outline,
   rounded,
 }) {
-  return <button className='bg-blue-100'>{children}</button>;
+  return <button className='px-3 py-1.5 border border-blue-600 bg-blue-300 text-white'>{children}</button>;
 }
 
 Button.propTypes = {
