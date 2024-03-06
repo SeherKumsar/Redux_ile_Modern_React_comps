@@ -4,20 +4,16 @@ import Button from './Button';
 
 function App() {
 
-  const handleClick = () => {
-    console.log('Click!!');
-  };
-
   return (
     <div>
       <div>
-        <Button secondary rounded outline onClick={handleClick}>
+        <Button secondary rounded outline>
           <GoBell />
           Click me!!
         </Button>
       </div>
       <div>
-        <Button danger outline onMouseEnter={handleClick}>
+        <Button danger outline>
           <GoCloudDownload />
           Buy Now!
         </Button>
