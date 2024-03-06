@@ -3,12 +3,12 @@ import className from "classnames";
 // JavaScripte - yoksa direkt bg: true yazılabilir
 // Fakat '- varsa bg-blue-500' gibi tırnak içinde ifade olmak zorundadır.
 
-const finalClassName = className('px-1.5', {
-  'py-1.5': true,
-  'bg-blue-500': false,
-});
+// const finalClassName = className('px-1.5', {
+//   'py-1.5': true,
+//   'bg-blue-500': false,
+// });
 
-console.log(finalClassName);
+// console.log(finalClassName);
 
 function Button({
   children,
@@ -20,14 +20,11 @@ function Button({
   outline,
   rounded,
 }) {
-  // let baseClassName = 'px-3 py-1.5 border'
-  // if (primary) {
-  //   baseClassName += 'bg-blue-500 border-blue-600 text-white';
-  // } else if (secondary) {
-  //   baseClassName += 'bg-blue-500 border-blue-600 text-white';
-  // }
+  const classes = className('px-3', 'py-1.5', 'border', {
+    'border-blue-500 bg-blue-500 text-white': primary
+  });
 
-  return <button className='px-3 py-1.5 border border-blue-600 bg-blue-300 text-white'>{children}</button>;
+  return <button className={classes}>{children}</button>;
 }
 
 Button.propTypes = {
