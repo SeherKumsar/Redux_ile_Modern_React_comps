@@ -1,4 +1,4 @@
-import { GoBell } from "react-icons/go";
+import { GoBell, GoCloudDownload , GoDatabase} from "react-icons/go";
 // npm install --save-exact react-icons@4.6.0
 import Button from './Button';
 
@@ -7,17 +7,21 @@ function App() {
     <div>
       <div>
         <Button success rounded outline>
-          <GoBell />
+          <GoBell className="mr-1" />
           Click me!!
         </Button>
       </div>
       <div>
         <Button danger outline>
+          <GoCloudDownload className="mr-1" />
           Buy Now!
         </Button>
       </div>
       <div>
-        <Button warning>See Deal!</Button>
+        <Button warning>
+          <GoDatabase className="mr-1" />
+          See Deal!
+        </Button>
       </div>
       <div>
         <Button secondary outline>
