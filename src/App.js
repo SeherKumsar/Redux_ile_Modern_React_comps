@@ -5,17 +5,17 @@ function App() {
     {
       id: 'qwe5465',
       label: 'Can I use React on a project?',
-      content: 'You can use React on any project you want.'
+      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
       id: 'xcv4567',
       label: 'Can I use JavaScript on a project?',
-      content: 'You can use React on any project you want.'
+      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
       id: 'bnmbn74125',
       label: 'Can I use CSS on a project?',
-      content: 'You can use React on any project you want.'
+      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
   ];
 
