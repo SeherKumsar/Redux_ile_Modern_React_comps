@@ -3,31 +3,19 @@ import { useState } from "react";
 function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
-//   const handleClick = (index) => {
-//     setExpandedIndex(index);
-//   };
-
   const handleClick = (nextIndex) => {
     setExpandedIndex(nextIndex);
   };
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex;
-    // const content = isExpanded && <div>{item.content}</div>
-    // const handleClick = () => {
-    //     setExpandedIndex(index);
-    // };
+
+    const icon = <span>{isExpanded ? "DOWN" : "LEFT"}</span>;
 
     return (
       <div key={item.id}>
-        <div
-          //   onClick={() => {
-          //     console.log(index);
-          //     setExpandedIndex(index);
-          //   }}
-        //   onClick={handleClick}
-            onClick={() => handleClick(index)}
-        >
+        <div onClick={() => handleClick(index)}>
+          {icon}
           {item.label}
         </div>
         {isExpanded && <div>{item.content}</div>}
