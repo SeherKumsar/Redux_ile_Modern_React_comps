@@ -22,8 +22,8 @@ function App() {
       value: 'blue',
     },
   ];
-
-  return <Dropdown options={options} selection={selection} onSelect={handleSelect} />; // eslint-disable-line
+  // Seçili olan öge value olarak seçilir ve kullanıcı seçimi değiştirdiğinde aşağıya prob lar çağrılır.
+  return <Dropdown options={options} value={selection} onChange={handleSelect} />; // eslint-disable-line
 }
 
 export default App;
