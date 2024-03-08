@@ -5,13 +5,18 @@ import Panel from "./Panel";
 function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect((event) => {
+    useEffect((event) => {
     const handler = (event) => {
         console.log(event.target);
     };
     document.addEventListener("click", handler, true); // eslint-disable-line
     // Tıklama gerçekleştikten sonra yakalanan tıklamalar izlenir
-}, []);
+
+    return () => {
+        document.removeEventListener("click", handler); // clean useEffect
+    };
+
+    }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
