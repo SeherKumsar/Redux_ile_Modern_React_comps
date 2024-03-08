@@ -8,7 +8,12 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
-      console.log(divEl.current);
+    //   console.log(divEl.current);
+        if (!divEl.current.contains(event.target)) {
+            // dropdown is close if the user clicks outside of it
+            setIsOpen(false); // true olursa Dropdown kapanmaz
+            // Eğer birden fazla dropdown varsa ve biri açıksa diğerleri kapanır
+        }
     };
     document.addEventListener("click", handler, true); // eslint-disable-line
     // Tıklama gerçekleştikten sonra yakalanan tıklamalar izlenir
