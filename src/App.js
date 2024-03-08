@@ -1,6 +1,13 @@
+import { useState } from "react";
 import Dropdown from "./components/Dropdown";
 
 function App() {
+  const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  };
+
   const options = [
     {
       label: 'Red',
@@ -14,9 +21,9 @@ function App() {
       label: 'Blue',
       value: 'blue',
     },
-  ]
+  ];
 
-  return <Dropdown options={options}/>; // eslint-disable-line
+  return <Dropdown options={options} selection={selection} onSelect={handleSelect} />; // eslint-disable-line
 }
 
 export default App;
