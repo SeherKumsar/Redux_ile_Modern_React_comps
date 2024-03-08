@@ -1,25 +1,22 @@
-import Accordion from "./components/Accordion";
+import Dropdown from "./components/Dropdown";
 
 function App() {
-  const items = [
+  const options = [
     {
-      id: 'qwe5465',
-      label: 'Can I use React on a project?',
-      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Red',
+      value: 'red',
     },
     {
-      id: 'xcv4567',
-      label: 'Can I use JavaScript on a project?',
-      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Green',
+      value: 'green',
     },
     {
-      id: 'bnmbn74125',
-      label: 'Can I use CSS on a project?',
-      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Blue',
+      value: 'blue',
     },
-  ];
+  ]
 
-  return <Accordion items={items}/>;
+  return <Dropdown options={options}/>; // eslint-disable-line
 }
 
 export default App;
