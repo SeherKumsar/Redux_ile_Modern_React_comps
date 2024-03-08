@@ -1,27 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GoChevronDown } from "react-icons/go";
 import Panel from "./Panel";
 
 function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect((event) => {
+    const handler = (event) => {
+        console.log(event.target);
+    };
+    document.addEventListener("click", handler, true); // eslint-disable-line
+    // Tıklama gerçekleştikten sonra yakalanan tıklamalar izlenir
+}, []);
+
   const handleClick = () => {
     setIsOpen(!isOpen);
-    // setIsOpen((currentIsOpen) => !currentIsOpen);
   };
-  // FOR CONSOLE LOG
-  //   const handleClick = (event) => {
-  //     window.timeThree = performance.now();
-  //     if (Dropdown.contains(event.target)) {
-  //       console.log("Inside dropdown");
-  //     } else {
-  //       console.log("Outside dropdown");
-  //     }
-  //   };
-  //   document.addEventListener("click", handleClick, false);
-//   window.timeTwo = performance.now();
+  
   const handleOptionClick = (option) => {
-    // window.timeOne = performance.now();
     // CLOSE DROPDOWN
     setIsOpen(false);
     // WHAT OPTION DID THE USER CLICK ON??
