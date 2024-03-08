@@ -8,7 +8,7 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
-      console.log(divEl);
+      console.log(divEl.current);
     };
     document.addEventListener("click", handler, true); // eslint-disable-line
     // Tıklama gerçekleştikten sonra yakalanan tıklamalar izlenir
