@@ -9,8 +9,19 @@ function Dropdown({ options, value, onChange }) {
     setIsOpen(!isOpen);
     // setIsOpen((currentIsOpen) => !currentIsOpen);
   };
-
+  // FOR CONSOLE LOG
+  //   const handleClick = (event) => {
+  //     window.timeThree = performance.now();
+  //     if (Dropdown.contains(event.target)) {
+  //       console.log("Inside dropdown");
+  //     } else {
+  //       console.log("Outside dropdown");
+  //     }
+  //   };
+  //   document.addEventListener("click", handleClick, false);
+//   window.timeTwo = performance.now();
   const handleOptionClick = (option) => {
+    // window.timeOne = performance.now();
     // CLOSE DROPDOWN
     setIsOpen(false);
     // WHAT OPTION DID THE USER CLICK ON??
@@ -38,11 +49,7 @@ function Dropdown({ options, value, onChange }) {
         {value?.label || "Select..."}
         <GoChevronDown className="text-lg" />
       </Panel>
-      {isOpen && (
-        <Panel className="absolute top-full">
-          {renderedOptions}
-        </Panel>
-      )}
+      {isOpen && <Panel className="absolute top-full">{renderedOptions}</Panel>}
     </div>
   );
 }

@@ -23,7 +23,12 @@ function App() {
     },
   ];
   // Seçili olan öge value olarak seçilir ve kullanıcı seçimi değiştirdiğinde aşağıya prob lar çağrılır.
-  return <Dropdown options={options} value={selection} onChange={handleSelect} />; // eslint-disable-line
+  return (
+    <div className="flex">
+      <Dropdown options={options} value={selection} onChange={handleSelect} />
+      <Dropdown options={options} value={selection} onChange={handleSelect} />
+    </div>
+  );
 }
 
 export default App;
