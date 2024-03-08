@@ -27,7 +27,8 @@ function Dropdown({ options, selection, onSelect}) {
 
     return (
         <div>
-            <div onClick={handleClick}>{content}</div>
+            {/* <div onClick={handleClick}>{content}</div> */}
+            <div onClick={handleClick}>{selection?.label || "Select..."}</div>
             {isOpen && <div>{renderedOptions}</div>}
         </div>
         // ilk parametre false ise ifadenin tamamı false
