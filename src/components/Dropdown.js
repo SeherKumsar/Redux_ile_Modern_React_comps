@@ -8,9 +8,11 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
-    //   console.log(divEl.current);
+        if (!divEl.current) {
+            return;
+        }
+    
         if (!divEl.current.contains(event.target)) {
-            // dropdown is close if the user clicks outside of it
             setIsOpen(false); // true olursa Dropdown kapanmaz
             // Eğer birden fazla dropdown varsa ve biri açıksa diğerleri kapanır
         }
