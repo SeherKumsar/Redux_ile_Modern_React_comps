@@ -13,7 +13,7 @@ function ModalPage() {
     setShowModal(false);
   };
   const actionBar = <div>
-    <Button primary>I Accept</Button>
+    <Button onClick={handleClose} primary>I Accept</Button>
   </div>
   const modal = <Modal onClose={handleClose} actionBar={actionBar} >
     <p>
