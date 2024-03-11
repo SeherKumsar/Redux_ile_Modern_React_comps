@@ -12,16 +12,22 @@ function ModalPage() {
   const handleClose = () => {
     setShowModal(false);
   };
+  const actionBar = <div>
+    <Button primary>I Accept</Button>
+  </div>
+  const modal = <Modal onClose={handleClose} actionBar={actionBar} >
+    <p>
+        Here is an important aggrement
+    </p>
+    </Modal>;
 
   return (
     <div className="relative">
-    {/* <div className="relative">  */}
     {/* relative is used to make the modal absolute */}
-    {/* relative, modal'ı absolute yani ekranın tamamında göstermek için kullanılır */}
       <Button onClick={handleClick} primary>
         Open Modal
       </Button>
-      {showModal && <Modal onClose={handleClose} />}
+      {showModal && modal}
     </div>
   );
 }
