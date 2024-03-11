@@ -5,7 +5,7 @@ import Button from '../components/Button';
 function ButtonPage() {
 
   const handleClick = () => {
-    console.log('Click!!');
+    // console.log('Click!!');
   };
 
   return (
