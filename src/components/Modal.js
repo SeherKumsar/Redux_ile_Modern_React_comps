@@ -1,6 +1,16 @@
 import ReactDOM from "react-dom";
+import { useEffect } from "react";
 
 function Modal({ onClose, children, actionBar }) {
+  useEffect(() => {
+        document.body.classList.add("overflow-hidden");
+        // Add the overflow-hidden class to the body when the component is mounted
+        return () => {
+      document.body.classList.remove("overflow-hidden");
+      // Remove the backdrop when the component is unmounted
+    };
+  }, []);
+
   return ReactDOM.createPortal(
     <div>
       <div
