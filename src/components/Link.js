@@ -3,14 +3,16 @@ import classNames from "classnames";
 // import NavigationContext from "../context/navigation";
 import useNavigation from "../hooks/use-navigation";
 
-function Link({ to, children, className }) {
-  const { navigate } = useNavigation();
+function Link({ to, children, className, activeClassName}) {
+  const { navigate, currentPath } = useNavigation();
   // ilk parametre gideceği yol, ikinci parametre gösterilecek metin
 
   const classes = classNames(
-    "text-blue-500",
-    className
+    'text-blue-500',
+    className,
+    currentPath === to && activeClassName
   );
+
   const handleClick = (event) => {
     if (event.metaKey || event.ctrlKey) {
       return;
