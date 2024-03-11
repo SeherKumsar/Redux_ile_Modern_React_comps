@@ -15,16 +15,16 @@ function TablePage() {
     },
     {
       label: "Color",
-      render: (fruit) => fruit.color,
+      render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>
     },
     {
       label: "Score",
       render: (fruit) => fruit.score,
     },
-    {
-      label: "Score Squared",
-        render: (fruit) => fruit.score ** 2,
-    },
+    // {
+    //   label: "Score Squared",
+    //     render: (fruit) => fruit.score ** 2,
+    // },
   ];
 
   return (
