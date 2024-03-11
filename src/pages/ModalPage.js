@@ -10,7 +10,7 @@ function ModalPage() {
   };
 
   return (
-    <div>
+    <div className="relative">
     {/* <div className="relative">  */}
     {/* relative is used to make the modal absolute */}
     {/* relative, modal'ı absolute yani ekranın tamamında göstermek için kullanılır */}
