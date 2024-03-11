@@ -6,11 +6,13 @@ function ModalPage() {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    setShowModal(!showModal);
+    setShowModal(true);
   };
 
   return (
-    <div>
+    <div className="relative"> 
+    {/* relative is used to make the modal absolute */}
+    {/* relative, modal'ı absolute yani ekranın tamamında göstermek için kullanılır */}
       <Button onClick={handleClick} primary>
         Open Modal
       </Button>
