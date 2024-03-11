@@ -21,15 +21,16 @@ function TablePage() {
       label: "Score",
       render: (fruit) => fruit.score,
     },
-    // {
-    //   label: "Score Squared",
-    //     render: (fruit) => fruit.score ** 2,
-    // },
   ];
+
+  const keyFn = (fruit) => {
+    return fruit.name;
+  };
+
 
   return (
     <div>
-      <Table data={data} config={config} />
+      <Table data={data} config={config} keyFn={keyFn} />
     </div>
   );
 }
