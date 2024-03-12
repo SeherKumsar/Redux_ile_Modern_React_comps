@@ -1,11 +1,8 @@
-import classNames from "classnames";
-// import { useContext } from "react";
-// import NavigationContext from "../context/navigation";
-import useNavigation from "../hooks/use-navigation";
+import classNames from 'classnames';
+import useNavigation from '../hooks/use-navigation';
 
-function Link({ to, children, className, activeClassName}) {
+function Link({ to, children, className, activeClassName }) {
   const { navigate, currentPath } = useNavigation();
-  // ilk parametre gideceği yol, ikinci parametre gösterilecek metin
 
   const classes = classNames(
     'text-blue-500',

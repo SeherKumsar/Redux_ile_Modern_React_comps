@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Modal from "../components/Modal";
-import Button from "../components/Button";
+import { useState } from 'react';
+import Modal from '../components/Modal';
+import Button from '../components/Button';
 
 function ModalPage() {
   const [showModal, setShowModal] = useState(false);
@@ -12,22 +12,27 @@ function ModalPage() {
   const handleClose = () => {
     setShowModal(false);
   };
-  const actionBar = <div>
-    <Button onClick={handleClose} primary>I Accept</Button>
-  </div>
-  const modal = <Modal onClose={handleClose} actionBar={actionBar} >
-    <p>
-        Here is an important aggrement
-    </p>
-    </Modal>;
+
+  const actionBar = (
+    <div>
+      <Button onClick={handleClose} primary>
+        I Accept
+      </Button>
+    </div>
+  );
+  const modal = (
+    <Modal onClose={handleClose} actionBar={actionBar}>
+      <p>Here is an important agreement for you to accept</p>
+    </Modal>
+  );
 
   return (
-    <div className="relative">
-    {/* relative is used to make the modal absolute */}
-    <Button onClick={handleClick} primary>
+    <div>
+      <Button onClick={handleClick} primary>
         Open Modal
       </Button>
       {showModal && modal}
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat elit
         in est interdum fermentum. Cras vehicula a urna sit amet auctor. Mauris
@@ -141,4 +146,5 @@ function ModalPage() {
     </div>
   );
 }
+
 export default ModalPage;

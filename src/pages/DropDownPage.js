@@ -13,7 +13,7 @@ function DropdownPage() {
     { label: 'Green', value: 'green' },
     { label: 'Blue', value: 'blue' },
   ];
-  // Seçili olan öge value olarak seçilir ve kullanıcı seçimi değiştirdiğinde aşağıya prob lar çağrılır.
+
   return (
     <div className="flex">
       <Dropdown options={options} value={selection} onChange={handleSelect} />

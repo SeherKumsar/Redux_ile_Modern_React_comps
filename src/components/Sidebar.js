@@ -1,16 +1,16 @@
-import Link from "./Link";
+import Link from './Link';
 
 function Sidebar() {
   const links = [
-    { label: "Dropdown", path: "/" },
-    { label: "Accordion", path: "/accordion" },
-    { label: "Buttons", path: "/buttons" },
-    { label: "Modal", path: "/modal" },
-    { label: "Table", path: "/table" },
-    { label: "Counter", path: "/counter" },
-];
+    { label: 'Dropdown', path: '/' },
+    { label: 'Accordion', path: '/accordion' },
+    { label: 'Buttons', path: '/buttons' },
+    { label: 'Modal', path: '/modal' },
+    { label: 'Table', path: '/table' },
+    { label: 'Counter', path: '/counter' },
+  ];
 
-  const renderedOptions = links.map((link) => {
+  const renderedLinks = links.map((link) => {
     return (
       <Link
         key={link.label}
@@ -25,9 +25,7 @@ function Sidebar() {
 
   return (
     <div className="sticky top-0 overflow-y-scroll flex flex-col items-start">
-      {/* <Link to="/accordion">Go to accordion</Link>
-      <Link to="/dropdown">Go to dropdown</Link> */}
-      {renderedOptions}
+      {renderedLinks}
     </div>
   );
 }
