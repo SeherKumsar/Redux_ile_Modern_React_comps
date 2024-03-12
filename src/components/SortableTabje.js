@@ -2,11 +2,10 @@ import { useState } from "react";
 import Table from "./Table";
 
 function SortableTable(props) {
-
   const [sortOrder, setSortOrder] = useState(null);
   const [sortBy, setSortBy] = useState(null);
 
-  const { config } = props;
+  const { config, data } = props;
 
   const handleClick = (label) => {
     // console.log(`Sorting by ${label}`);
@@ -38,11 +37,34 @@ function SortableTable(props) {
     };
   });
 
-  return <div>
-    {sortOrder} - {sortBy}
-    <Table {...props} config={updatedConfig} />;
-    {/* props should contain the following properties */}
-  </div>
+  // Only sort data if sortOrder && sortBy are not null
+  // Make a copy of the 'data' prop
+  // Find the correct sortValue function and use it
+
+  let sortedData = data;
+  if (sortOrder && sortBy) {
+    const { sortValue } = config.find((column) => column.label === sortBy);
+    sortedData = [...data].sort((a, b) => {
+      const valueA = sortValue(a);
+      const valueB = sortValue(b);
+
+      const reverseOrder = sortOrder === 'asc' ? 1 : -1;
+
+      if (typeof valueA === 'string') {
+        return valueA.localeCompare(valueB) * reverseOrder;
+      } else {
+        return (valueA - valueB) * reverseOrder;
+      }
+    });
+  }
+  
+  return (
+    <div>
+      {sortOrder} - {sortBy}
+      <Table {...props} data={sortedData} config={updatedConfig} />;
+      {/* props should contain the following properties */}
+    </div>
+  );
 }
 
 export default SortableTable;
