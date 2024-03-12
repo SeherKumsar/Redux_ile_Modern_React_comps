@@ -20,6 +20,7 @@ function useSomething() {
 }
 
 function CounterPage({ intialCount }) {
+    const { count, handleClick} = useSomething();
     // handlePress is a function that will be called when the button is released
     // JSX expressions must have one parent element
     return <div>
