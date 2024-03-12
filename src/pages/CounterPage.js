@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Button from '../components/Button';
 
 function useSomething() {
+    // Custom hooks can call other hooks
     const [count, setCount] = useState(intialCount);
 
     useEffect(() =>{
