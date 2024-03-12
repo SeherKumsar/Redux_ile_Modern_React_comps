@@ -12,6 +12,11 @@ function useSomething() {
     const handleClick = () => {
         setCount(count + 1);
     };
+
+    return {
+        count,
+        handleClick
+    };
 }
 
 function CounterPage({ intialCount }) {
