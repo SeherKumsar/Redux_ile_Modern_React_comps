@@ -47,5 +47,12 @@ function useSort() {
     });
   }
 
+  return {
+    sortOrder,
+    sortBy,
+    sortedData,
+    handleClick,
+  };
+
 }
 export default useSort;
