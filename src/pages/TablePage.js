@@ -13,6 +13,7 @@ function TablePage() {
     {
       label: 'Name',
       render: (fruit) => fruit.name,
+      sortValue: (fruit) => fruit.name,
     },
     {
       label: 'Color',
@@ -20,9 +21,9 @@ function TablePage() {
     },
     {
       label: 'Score',
-      render: (fruit) => fruit.score,
-      header: () => <th className="bg-red-500">Score</th>,
-      // sortValue: (fruit) => fruit.score,
+      render: (fruit) => <h1>{fruit.score}</h1>,
+      // header: () => <th className="bg-red-500">Score</th>,
+      sortValue: (fruit) => fruit.score,
       // INSIDE SORTABLE TABLE
       // header: () => <th onClick={DOSORT()}>^ Score</th>,
     },
