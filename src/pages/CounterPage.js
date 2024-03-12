@@ -9,23 +9,23 @@ function useCounter(intialCount) {
         console.log(count);
     }, [count]);
 
-    const handleClick = () => {
+    const icrement = () => {
         setCount(count + 1);
     };
 
     return {
         count,
-        handleClick
+        icrement,
     };
 }
 
 function CounterPage({ intialCount }) {
-    const { count, handleClick} = useCounter(intialCount);
+    const { count, icrement} = useCounter(intialCount);
     // handlePress is a function that will be called when the button is released
     // JSX expressions must have one parent element
     return <div>
         <h1>Count is {count}</h1>
-        <Button onClick={handleClick}>
+        <Button onClick={icrement}>
             Increment
         </Button>
     </div>
