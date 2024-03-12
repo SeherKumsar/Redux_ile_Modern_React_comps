@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Button from '../components/Button';
 
-function useSomething() {
+function useSomething(intialCount) {
     // Custom hooks can call other hooks
     const [count, setCount] = useState(intialCount);
 
@@ -20,7 +20,7 @@ function useSomething() {
 }
 
 function CounterPage({ intialCount }) {
-    const { count, handleClick} = useSomething();
+    const { count, handleClick} = useSomething(intialCount);
     // handlePress is a function that will be called when the button is released
     // JSX expressions must have one parent element
     return <div>
