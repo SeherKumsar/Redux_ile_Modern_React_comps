@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import Button from '../components/Button';
 
+function useSomething() {
+    
+}
+
 function CounterPage({ intialCount }) {
     const [count, setCount] = useState(intialCount);
 
