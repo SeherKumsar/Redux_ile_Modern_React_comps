@@ -11,7 +11,6 @@ function useSort(data, config) {
             return;
         }
         
-    
         if (sortOrder === null) {
           setSortOrder("asc");
           setSortBy(label);
@@ -23,8 +22,6 @@ function useSort(data, config) {
           setSortBy(null);
         }
       };
-
-
       
   // Only sort data if sortOrder && sortBy are not null
   // Make a copy of the 'data' prop
