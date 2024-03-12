@@ -12,7 +12,7 @@ function SortableTable(props) {
     sortBy,
     sortedData,
     handleClick,
-  } = useSort();
+  } = useSort(config, data);
   
   
 
