@@ -1,11 +1,19 @@
 
 import { GoArrowSmallDown, GoArrowSmallUp } from 'react-icons/go';
 import Table from "./Table";
+import useSort from '../hooks/use-sort';
 
 function SortableTable(props) {
   
   const { config, data } = props;
-
+  
+  const {
+    sortOrder,
+    sortBy,
+    sortedData,
+    handleClick,
+  } = useSort();
+  
   
 
   const updatedConfig = config.map((column) => {
