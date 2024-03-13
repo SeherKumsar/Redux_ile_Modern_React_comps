@@ -42,6 +42,9 @@ function CounterPage({ initialCount }) {
   };
   const decrement = () => {
     // setCount(count - 1);
+    dispatch({
+      type: DECREMENT_COUNT,
+    });
   };
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
