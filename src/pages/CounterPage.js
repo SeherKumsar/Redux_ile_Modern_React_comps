@@ -14,6 +14,11 @@ const reducer = (state, action) => {
         ...state,
         count: state.count + 1,
       };
+    case DECREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count - 1,
+      };
     case SET_VALUE_TO_ADD:
       return {
         ...state,
