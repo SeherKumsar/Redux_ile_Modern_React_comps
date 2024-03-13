@@ -5,6 +5,7 @@ import Panel from '../components/Panel';
 
 const INCREMENT_COUNT = 'increment';
 const SET_VALUE_TO_ADD = 'change_value_to_add';
+const DECREMENT_COUNT = 'decrement';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,21 +23,6 @@ const reducer = (state, action) => {
       // throw new Error('unexpected action type' + action.type);
       return state;
   }
-  // if (action.type === INCREMENT_COUNT) {
-  //   return {
-  //     ...state,
-  //     count: state.count + 1,
-  //   };
-  // }
-
-  // if (action.type === SET_VALUE_TO_ADD) {
-  //   return {
-  //     ...state,
-  //     valueToAdd: action.payload,
-  //   };
-  // }
-
-  // return state;
 };
 
 function CounterPage({ initialCount }) {
@@ -59,7 +45,6 @@ function CounterPage({ initialCount }) {
   };
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
-
     // setValueToAdd(value);
     dispatch({
       type: SET_VALUE_TO_ADD,
@@ -68,7 +53,6 @@ function CounterPage({ initialCount }) {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-
     // setCount(count + valueToAdd);
     // setValueToAdd(0);
   };
